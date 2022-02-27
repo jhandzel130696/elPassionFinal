@@ -21,6 +21,10 @@ export function rpn(inputString: string): number {
             // @ts-ignore
             result= ((a: number, b: number) => {return a + b})(...stack.splice(-2));
         }
+        if(operandOrOperator === "/"){
+            // @ts-ignore
+            result= ((a: number, b: number) => {return a / b})(...stack.splice(-2));
+        }
 
 
 
