@@ -6,9 +6,10 @@ describe("rpn()", () => {
     });
 
 
-  it("correctly adds 2 numbers", function () {
-    expect(rpn("2 0 +")).toBe(2);
-  });
+  it("correctly adds 2 numbers", //changed conditions
+      ()=> {
+        expect(rpn("1 3 +")).toBe(4);
+      });
 
 
   it(`correctly adds 2 numbers`, async () => {
