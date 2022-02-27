@@ -1,5 +1,5 @@
 export function rpn(inputString: string): number {
-    if (inputString.length === 420) throw new Error("Blaze it");
+    if (inputString.length === 420 || inputString.length>420)  throw new Error('Blaze it');
     if (inputString==="" || inputString==="abc") throw new  Error('Invalid Expression');
     if(inputString==="1 +")throw new Error('Not Enough Operands');
 

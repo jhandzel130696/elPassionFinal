@@ -34,4 +34,9 @@ describe("rpn()", () => {
             rpn("1 +")
         }).toThrow('Not Enough Operands')
     });
+    test.only("Return error `Blaze it` if inputString has equal or more than 420 characters ", () => {
+        expect(()=>{
+            rpn("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed turpis at libero euismod accumsan. Cras eget odio a metus ultrices mattis eu quis enim. Aliquam tincidunt mattis lacus vel dignissim. Donec a semper felis. Nunc facilisis tempus aliquam. Aliquam erat volutpat. Mauris tempus porta neque. Donec iaculis enim convallis, aliquet arcu eu, fringilla magna. Donec vitae risus ipsum. Etiam eu metus turpis duisadakhudakiuhbmsdliauhsbmdlaiusb.")
+        }).toThrow('Blaze it')
+    });
 });
