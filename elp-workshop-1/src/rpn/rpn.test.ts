@@ -22,4 +22,7 @@ describe("rpn()", () => {
     it("correctly substract 2 numbers push to the stack, correctly add two numbers and push to the stack and finally multiple 2 numbers from stack", () => {
         expect(rpn("3 1 - 2 2 + *")).toBe(8);
     });
+    it("correctly add 2 last numbers from stack,add another two numbers from stack, multiple last number,add two lat numbers from stack and finally add two last numbers form stack", () => {
+        expect(rpn("4 3 4 + 5 1 + 2 * + +")).toBe(23);
+    });
 });
