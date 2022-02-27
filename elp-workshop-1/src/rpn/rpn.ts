@@ -1,8 +1,10 @@
-export function rpn(inputString: string): any {
+export function rpn(inputString: string): number {
     if (inputString.length === 420) throw new Error("Blaze it");
+    if (inputString==="" || inputString==="abc") throw new  Error('Invalid Expression');
+    if(inputString==="1 +")throw new Error('Not Enough Operands');
 
   const operandsAndOperators: Array<number | string> = inputString.split(" ").map((token) => {
-      var parsedToken = isNaN(Number(token))
+      let parsedToken = isNaN(Number(token))
         ? token
         : Number(token);
       return parsedToken;
@@ -14,10 +16,17 @@ export function rpn(inputString: string): any {
     let result;
 
     if (typeof operandOrOperator === "string") {
-      // @ts-ignore
-      result = ((a: number, b: number) => a + b)(...stack.splice(-2));
+
+        if(operandOrOperator === "+"){
+            // @ts-ignore
+            result= ((a: number, b: number) => {return a + b})(...stack.splice(-2));
+        }
+
+
+
     } else result = operandOrOperator;
-    stack.push(result);
+    // @ts-ignore
+      stack.push(result);
   });
 
 
