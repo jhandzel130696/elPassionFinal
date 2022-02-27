@@ -29,4 +29,9 @@ describe("rpn()", () => {
         expect(()=>{
             rpn("")}).toThrow('Invalid Expression')
     });
+    test("Return error `Not Enough Operands` if inputString has operand 1 and + ", () => {
+        expect(()=>{
+            rpn("1 +")
+        }).toThrow('Not Enough Operands')
+    });
 });
