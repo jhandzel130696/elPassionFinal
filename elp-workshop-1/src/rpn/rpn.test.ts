@@ -25,4 +25,8 @@ describe("rpn()", () => {
     it("correctly add 2 last numbers from stack,add another two numbers from stack, multiple last number,add two lat numbers from stack and finally add two last numbers form stack", () => {
         expect(rpn("4 3 4 + 5 1 + 2 * + +")).toBe(23);
     });
+    test("Return `Invalid Expresion when inputString is emptyString or has abc word` ", () => {
+        expect(()=>{
+            rpn("")}).toThrow('Invalid Expression')
+    });
 });
