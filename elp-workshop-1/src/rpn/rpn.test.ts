@@ -19,4 +19,7 @@ describe("rpn()", () => {
     it("correctly divides  2  numbers", () => {
         expect(rpn("2 2 /")).toBe(1);
     });
+    it("correctly substract 2 numbers push to the stack, correctly add two numbers and push to the stack and finally multiple 2 numbers from stack", () => {
+        expect(rpn("3 1 - 2 2 + *")).toBe(8);
+    });
 });
